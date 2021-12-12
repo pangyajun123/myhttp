@@ -14,7 +14,6 @@
         <module>myhttp-core</module>
         <module>myhttp-spring</module>
         <module>myhttp-spring-boot-starter</module>
-        <module>myhttp-mock</module>
         <module>myhttp-example</module>
     </modules>
     <properties>
