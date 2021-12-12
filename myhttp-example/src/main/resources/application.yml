@@ -1,0 +1,24 @@
+
+server:
+  port: 8080
+
+myhttp:
+  okhttp:
+    enabled: true
+  httpcleint:
+    maxConnections: 10
+  cleint:
+    timeout: 3000
+    retry-count: 3
+    max-retry-interval: 600
+    variables:
+      localhostUrl: http://localhost:8080
+      amapUrl: http://ditu.amap.com
+
+
+logging:
+  level:
+    com:
+      iwbfly: info
+
+
