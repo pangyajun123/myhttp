@@ -11,18 +11,18 @@
 ##### 第一步：添加maven依赖
 
 添加maven依赖
-`xml
+```xml
  <dependency>
      <groupId>com.iwbfly</groupId>
      <artifactId>myhttp-spring-boot-starter</artifactId>
      <version>0.0.1-SNAPSHOT</version>
 </dependency>
-`
+```
 ##### 第二步：创建interfate
 
 高德地图api
 
-`java
+```java
 package com.iwbfly.client;
 
 import com.iwbfly.myhttp.annotation.Get;
@@ -38,12 +38,12 @@ public interface AmapClient {
     @Get(url = "service/regeo?longitude=${0}&latitude=${1}")
     Map getLocation(String longitude, String latitude);
 }
-`
-#####第三步：扫描接口
+```
+##### 第三步：扫描接口
 
 在Spring Boot的配置类或者启动类上加上@EnableMyhttpClients注解，并在属性里填上远程接口的所在的包名
 
-`java
+```java
 package com;
 
 import com.iwbfly.myhttp.EnableMyhttpClients;
@@ -57,12 +57,12 @@ public class MyhttpTest {
         SpringApplication.run(MyhttpTest.class);
     }
 }
-`
-#### 第四步：调用接口
+``` 
+##### 第四步：调用接口
 
 接下来就可以愉快的调用接口了
 
-`java
+```java
 // 注入接口实例
 @Autowired
 private AmapClient amapClient;
@@ -71,7 +71,7 @@ private AmapClient amapClient;
 Map result = amapClient.getLocation("121.475078", "31.223577");
 System.out.println(result);
 
-`
+```
 #### 参与贡献
 
 1.  Fork 本仓库
